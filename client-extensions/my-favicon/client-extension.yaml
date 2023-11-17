@@ -1,0 +1,8 @@
+assemble:
+    - from: assets
+      into: static
+
+my-favicon:
+    name: My Favicon
+    type: themeFavicon
+    url: favicon.ico
