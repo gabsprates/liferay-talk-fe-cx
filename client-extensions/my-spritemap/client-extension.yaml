@@ -1,0 +1,8 @@
+assemble:
+    - from: static
+      into: static
+
+my-spritemap:
+    name: My Spritemap
+    type: themeSpritemap
+    url: spritemap.svg
