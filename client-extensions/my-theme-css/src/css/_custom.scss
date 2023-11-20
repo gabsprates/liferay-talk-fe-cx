@@ -1,0 +1,11 @@
+#wrapper {
+    background: url(../img/background.jpg) center center repeat;
+}
+
+.component-heading {
+    box-shadow: 0 0 15px 10px var(--brand-color-1) inset;
+    background: #fff;
+    color: #000;
+    border-radius: 0 100vh 100vh 0;
+    padding: 0.5rem 1rem;
+}
