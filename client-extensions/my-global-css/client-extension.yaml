@@ -1,0 +1,9 @@
+assemble:
+    - from: build/
+      include: "*.css"
+      into: static/
+
+global-css:
+    name: Global CSS
+    type: globalCSS
+    url: global.min.css
