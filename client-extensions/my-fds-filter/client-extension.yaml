@@ -1,0 +1,7 @@
+assemble:
+    - from: build
+      into: static
+my-fds-filter:
+    name: My FDS Filter
+    type: fdsFilter
+    url: index.js
