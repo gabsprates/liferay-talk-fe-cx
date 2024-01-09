@@ -1,0 +1,19 @@
+{
+    "name": "my-fds-cell-renderer",
+    "version": "0.0.0",
+    "main": "./src/index.tsx",
+    "type": "module",
+    "description": "My Frontend Data Set Cell Renderer",
+    "scripts": {
+        "build": "tsc",
+        "start": "PORT=3000 serve --cors",
+        "watch": "tsc --watch"
+    },
+    "dependencies": {
+        "@liferay/js-api": "0.5.1-pre.0",
+        "serve": "^14.2.0"
+    },
+    "devDependencies": {
+        "typescript": "^5.0.4"
+    }
+}
