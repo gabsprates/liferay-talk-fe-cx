@@ -1,0 +1,13 @@
+{
+    "private": true,
+    "workspaces": {
+        "packages": [
+            "client-extensions/my-theme-css",
+            "client-extensions/my-global-css",
+            "client-extensions/my-fds-cell-renderer",
+            "client-extensions/my-fds-filter",
+            "client-extensions/my-js-import-maps-entry",
+            "client-extensions/my-custom-element"
+        ]
+    }
+}
