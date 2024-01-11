@@ -1,0 +1,15 @@
+assemble:
+    - from: vite-build
+      into: static
+
+my-js-import-maps-entry:
+    bareSpecifier: my-js-import-maps-entry
+    name: My ImportMap Project Library
+    type: jsImportMapsEntry
+    url: /index.js
+
+my-js-import-maps-entry-path:
+    bareSpecifier: my-js-import-maps-entry/
+    name: My ImportMap Project Library Paths
+    type: jsImportMapsEntry
+    url: /

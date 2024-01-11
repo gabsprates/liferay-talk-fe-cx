@@ -7,6 +7,6 @@ describe("App", () => {
         render(<App />);
 
         const title = screen.getByRole("heading");
-        expect(title).toHaveTextContent("Vite + React");
+        expect(title).toHaveTextContent("Vite + React | 2024-01-01 : Liferay");
     });
 });

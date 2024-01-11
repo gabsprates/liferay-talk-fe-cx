@@ -3,7 +3,7 @@ import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import "./App.css";
 
-// import { myDate, myString } from "my-js-import-maps-entry";
+import { myDate, myString } from "my-js-import-maps-entry";
 
 function App() {
     const [count, setCount] = useState(0);
@@ -24,7 +24,7 @@ function App() {
             </div>
 
             <h1 className="text-center mb-3">
-                &lt; Vite + React {/*| {myDate()} : {myString()}*/} &gt;
+                &lt; Vite + React | {myDate()} : {myString()} &gt;
             </h1>
 
             <div className="card text-center p-3">

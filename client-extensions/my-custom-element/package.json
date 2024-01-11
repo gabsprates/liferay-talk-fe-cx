@@ -12,6 +12,7 @@
         "test": "vitest"
     },
     "dependencies": {
+        "my-js-import-maps-entry": "*",
         "react": "^18.2.0",
         "react-dom": "^18.2.0"
     },

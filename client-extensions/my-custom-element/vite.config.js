@@ -18,7 +18,7 @@ export default defineConfig({
             external: [
                 // "react",
                 // "react-dom",
-                // /^my-js-import-maps-entry(\/.*)?$/,
+                /^my-js-import-maps-entry(\/.*)?$/,
             ],
 
             output: {
