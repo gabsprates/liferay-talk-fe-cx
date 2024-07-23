@@ -26,3 +26,4 @@
 /plugins-sdk/lib
 test-results
 vite-build
+ts-build
