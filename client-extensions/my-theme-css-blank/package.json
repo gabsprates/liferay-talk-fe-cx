@@ -1,0 +1,8 @@
+{
+    "liferayDesignPack": {
+        "baseTheme": "unstyled"
+    },
+    "main": "package.json",
+    "name": "@liferay/my-theme-css-blank",
+    "version": "0.0.0"
+}
