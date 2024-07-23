@@ -1,5 +1,6 @@
-((context, page) => {
+(function mutateAlert(context, page) {
     const originalAlert = context.alert;
+    const keyTitle = page.currentScript?.dataset.myKey ?? "Default Title";
 
     context.alert = (message) => {
         const dialog = page.createElement("dialog");
@@ -10,7 +11,7 @@
         button.autofocus = true;
         button.onclick = () => dialog.close();
 
-        dialog.innerHTML = `<p>${message}</p>`;
+        dialog.innerHTML = `<h1>${keyTitle}</h1><p>${message}</p>`;
         dialog.appendChild(button);
 
         page.body.appendChild(dialog);

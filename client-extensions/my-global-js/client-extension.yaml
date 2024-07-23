@@ -1,7 +1,11 @@
 assemble:
     - from: assets
       into: static
+
 my-global-js:
     name: My Global JS
     type: globalJS
     url: global.js
+    scriptElementAttributes:
+        async: true
+        data-my-key: "My Key Title"
