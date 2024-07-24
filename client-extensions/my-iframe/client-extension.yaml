@@ -1,0 +1,6 @@
+my-iframe:
+    name: My Iframe
+    portletCategoryName: category.client-extensions
+    type: iframe
+    instanceable: true
+    url: https://arnab-datta.github.io/counter-app/
