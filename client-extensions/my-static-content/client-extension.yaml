@@ -1,0 +1,7 @@
+assemble:
+    - from: assets
+      into: static
+
+my-static-content:
+    name: My Static Content
+    type: staticContent
