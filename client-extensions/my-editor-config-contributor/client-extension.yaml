@@ -1,0 +1,10 @@
+assemble:
+    - from: ts-build
+      into: static
+
+my-editor-config-contributor:
+    name: My Editor Config Contributor
+    type: editorConfigContributor
+    url: index.js
+    editorConfigKeys:
+        - description

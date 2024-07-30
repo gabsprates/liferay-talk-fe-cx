@@ -8,7 +8,8 @@
             "client-extensions/my-theme-css",
             "client-extensions/my-theme-css-blank",
             "client-extensions/BETA__my-fds-cell-renderer",
-            "client-extensions/BETA__my-fds-filter"
+            "client-extensions/BETA__my-fds-filter",
+            "client-extensions/my-editor-config-contributor"
         ]
     }
 }

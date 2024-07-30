@@ -1,0 +1,17 @@
+{
+    "name": "my-editor-config-contributor",
+    "dependencies": {
+        "@liferay/js-api": "0.6.0"
+    },
+    "devDependencies": {
+        "typescript": "^5.0.4"
+    },
+    "main": "./src/index.ts",
+    "scripts": {
+        "build": "tsc",
+        "watch": "tsc --watch"
+    },
+    "private": true,
+    "version": "0.0.0",
+    "type": "module"
+}
