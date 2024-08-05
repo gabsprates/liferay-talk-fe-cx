@@ -1,0 +1,15 @@
+{
+    "name": "my-spritemap-2",
+    "version": "0.0.0",
+    "scripts": {
+        "dev": "vite",
+        "build": "vite build",
+        "preview": "vite preview"
+    },
+    "devDependencies": {
+        "@clayui/css": "^3.117.0",
+        "@spiriit/vite-plugin-svg-spritemap": "^2.2.4",
+        "glob": "11.0.0",
+        "vite": "^5.3.4"
+    }
+}

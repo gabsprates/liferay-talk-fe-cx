@@ -1,0 +1,11 @@
+# client-extension.yaml
+
+assemble:
+    - from: build/static/assets
+      hashify: spritemap.svg
+      into: static
+
+my-spritemap-2:
+    name: My Spritemap 2
+    type: themeSpritemap
+    url: spritemap.*.svg

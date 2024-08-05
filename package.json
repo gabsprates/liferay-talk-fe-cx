@@ -9,7 +9,8 @@
             "client-extensions/my-theme-css-blank",
             "client-extensions/BETA__my-fds-cell-renderer",
             "client-extensions/BETA__my-fds-filter",
-            "client-extensions/my-editor-config-contributor"
+            "client-extensions/my-editor-config-contributor",
+            "client-extensions/my-spritemap-2"
         ]
     }
 }
