@@ -1,0 +1,15 @@
+assemble:
+    - from: build/vite/assets
+      into: static
+
+my-global-js-2-js:
+    name: My Global JS 2
+    type: globalJS
+    url: "*.js"
+    scriptElementAttributes:
+        async: true
+
+my-global-js-2-css:
+    name: My Global JS 2 CSS
+    type: globalCSS
+    url: "*.css"
