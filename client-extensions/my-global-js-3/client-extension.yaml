@@ -1,0 +1,56 @@
+assemble:
+    - from: build/vite
+      into: static
+
+######## cjs ########
+my-global-js-3-counter-cjs:
+    name: My Global JS 3 Counter CJS
+    type: globalJS
+    url: "counter.*.cjs.js"
+    scriptElementAttributes:
+        async: true
+
+my-global-js-3-decounter-cjs:
+    name: My Global JS 3 Decounter CJS
+    type: globalJS
+    url: "decounter.*.cjs.js"
+    scriptElementAttributes:
+        async: true
+
+######## es ########
+my-global-js-3-counter-es:
+    name: My Global JS 3 Counter ES
+    type: globalJS
+    url: "counter.*.es.js"
+    scriptElementAttributes:
+        async: true
+        type: "module"
+
+my-global-js-3-decounter-es:
+    name: My Global JS 3 Decounter ES
+    type: globalJS
+    url: "decounter.*.es.js"
+    scriptElementAttributes:
+        async: true
+        type: "module"
+
+######## system ########
+my-global-js-3-counter-system:
+    name: My Global JS 3 Counter System
+    type: globalJS
+    url: "counter.*.system.js"
+    scriptElementAttributes:
+        async: true
+
+my-global-js-3-decounter-system:
+    name: My Global JS 3 Decounter System
+    type: globalJS
+    url: "decounter.*.system.js"
+    scriptElementAttributes:
+        async: true
+
+######## CSS ########
+my-global-js-3-counter-css:
+    name: My Global CSS 3 Counter
+    type: globalCSS
+    url: "style.*.css"

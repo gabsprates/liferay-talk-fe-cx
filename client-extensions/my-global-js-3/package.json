@@ -1,0 +1,32 @@
+{
+    "name": "my-global-js-3",
+    "private": true,
+    "version": "0.0.0",
+    "type": "module",
+    "scripts": {
+        "dev": "vite",
+        "prebuild": "yarn test",
+        "build": "tsc && vite build",
+        "lint": "eslint . --report-unused-disable-directives --max-warnings 0",
+        "format": "prettier --write . ",
+        "check-code": "yarn format && yarn tsc --noEmit && yarn lint",
+        "preview": "vite preview",
+        "test": "vitest --run",
+        "test:watch": "vitest"
+    },
+    "devDependencies": {
+        "@eslint/js": "9.8.0",
+        "@testing-library/dom": "10.4.0",
+        "@testing-library/jest-dom": "6.4.8",
+        "@testing-library/user-event": "14.5.2",
+        "eslint": "9.8.0",
+        "glob": "11.0.0",
+        "globals": "15.9.0",
+        "jsdom": "24.1.1",
+        "prettier": "3.3.3",
+        "typescript": "5.5.4",
+        "typescript-eslint": "8.0.1",
+        "vite": "5.4.0",
+        "vitest": "2.0.5"
+    }
+}
