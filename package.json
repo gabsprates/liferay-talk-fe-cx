@@ -12,7 +12,8 @@
             "client-extensions/my-editor-config-contributor",
             "client-extensions/my-spritemap-2",
             "client-extensions/my-global-js-2",
-            "client-extensions/my-global-js-3"
+            "client-extensions/my-global-js-3",
+            "client-extensions/my-custom-element-2"
         ]
     }
 }
