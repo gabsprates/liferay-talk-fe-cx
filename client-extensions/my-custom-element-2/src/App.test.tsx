@@ -1,32 +1,27 @@
-import { render, screen } from "@testing-library/react";
 import App from "./App";
 
+import { render, screen } from "@testing-library/react";
+import userEvents from "@testing-library/user-event";
+
 describe("Component: <App />", () => {
-  it("should mount", () => {
-    render(<App />);
+    it("should start counter", () => {
+        render(<App />);
 
-    const button = screen.getByRole("button", { name: /count is 0/ });
-    expect(button).toBeInTheDocument();
-  });
+        const button = screen.getByRole<HTMLButtonElement>("button");
+        expect(button).toHaveTextContent("count is 0");
+    });
+
+    it("should add counter when click on the button", async () => {
+        const user = userEvents.setup();
+
+        render(<App />);
+
+        const button = screen.getByRole<HTMLButtonElement>("button");
+
+        expect(button).toHaveTextContent("count is 0");
+
+        await user.click(button);
+
+        expect(button).toHaveTextContent("count is 1");
+    });
 });
-
-//       <div>
-//         <a href="https://vitejs.dev" target="_blank">
-//           <img src={viteLogo} className="logo" alt="Vite logo" />
-//         </a>
-//         <a href="https://react.dev" target="_blank">
-//           <img src={reactLogo} className="logo react" alt="React logo" />
-//         </a>
-//       </div>
-//       <h1>Vite + React</h1>
-//       <div className="card">
-//         <button onClick={() => setCount((count) => count + 1)}>
-//           count is {count}
-//         </button>
-//         <p>
-//           Edit <code>src/App.tsx</code> and save to test HMR
-//         </p>
-//       </div>
-//       <p className="read-the-docs">
-//         Click on the Vite and React logos to learn more
-//       </p>

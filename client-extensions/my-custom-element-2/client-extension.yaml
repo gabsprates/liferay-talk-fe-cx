@@ -1,16 +1,16 @@
 assemble:
-  - from: build/vite/
-    into: static
+    - from: build/vite/
+      into: static
 
 my-custom-element-2:
-  cssURLs:
-    - index.css
-  friendlyURLMapping: my-custom-element-2
-  htmlElementName: my-custom-element-2
-  instanceable: true
-  name: My Custom Element 2
-  portletCategoryName: category.client-extensions
-  type: customElement
-  urls:
-    - index.js
-  useESM: true
+    cssURLs:
+        - index.css
+    friendlyURLMapping: my-custom-element-2
+    htmlElementName: my-custom-element-2
+    instanceable: true
+    name: My Custom Element 2
+    portletCategoryName: category.client-extensions
+    type: customElement
+    urls:
+        - index.js
+    useESM: true
