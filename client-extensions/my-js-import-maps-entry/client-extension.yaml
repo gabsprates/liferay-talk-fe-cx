@@ -1,5 +1,5 @@
 assemble:
-    - from: vite-build
+    - from: build/vite
       into: static
 
 my-js-import-maps-entry:

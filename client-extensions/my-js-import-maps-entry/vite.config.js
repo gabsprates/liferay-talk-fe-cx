@@ -11,30 +11,33 @@ import { fileURLToPath } from "node:url";
  */
 
 export default defineConfig({
-  build: {
-    outDir: "./vite-build",
+    build: {
+        outDir: "./build/vite",
 
-    lib: {
-      entry: Object.fromEntries(
-        glob
-          .sync("lib/**/*.ts")
-          .map((file) => [
-            path.relative(
-              "lib",
-              file.slice(0, file.length - path.extname(file).length)
+        lib: {
+            entry: Object.fromEntries(
+                glob
+                    .sync("lib/**/*.ts")
+                    .map((file) => [
+                        path.relative(
+                            "lib",
+                            file.slice(
+                                0,
+                                file.length - path.extname(file).length,
+                            ),
+                        ),
+
+                        fileURLToPath(new URL(file, import.meta.url)),
+                    ]),
             ),
+            formats: ["es"],
+        },
 
-            fileURLToPath(new URL(file, import.meta.url)),
-          ])
-      ),
-      formats: ["es"],
+        rollupOptions: {
+            output: {
+                chunkFileNames: "[name].js",
+                entryFileNames: "[name].js",
+            },
+        },
     },
-
-    rollupOptions: {
-      output: {
-        chunkFileNames: "[name].js",
-        entryFileNames: "[name].js",
-      },
-    },
-  },
 });
