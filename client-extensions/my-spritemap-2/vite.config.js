@@ -4,6 +4,15 @@ import { globSync } from "glob";
 import { dirname, parse } from "path";
 import { copyFileSync, existsSync, mkdirSync } from "fs";
 
+const getIconsFrom = (pattern, callback) => {
+    globSync(pattern).forEach((icon) => {
+        const parsed = parse(icon);
+        callback(icon, { ...parsed, filename: parsed.base });
+    });
+};
+
+const DESTINATION_PATH = "./build/icons";
+
 export default defineConfig({
     build: {
         outDir: "build/static",
@@ -12,25 +21,36 @@ export default defineConfig({
         {
             name: "copy-clay-icons",
             buildStart: () => {
-                const destination = "./src/build/__clay";
+                const iconReferences = new Map();
 
-                if (!existsSync(destination)) {
-                    mkdirSync(destination, { recursive: true });
-                }
+                getIconsFrom(`./src/*.svg`, (icon, { filename }) => {
+                    iconReferences.set(filename, icon);
+                });
 
                 const clayIconsPath = dirname(
-                    require.resolve("@clayui/css/lib/images/icons/icons.svg")
+                    require.resolve("@clayui/css/lib/images/icons/icons.svg"),
                 );
 
-                const clayIcons = globSync(`${clayIconsPath}/!(icons).svg`);
+                getIconsFrom(
+                    `${clayIconsPath}/!(icons).svg`,
+                    (icon, { filename }) => {
+                        if (iconReferences.has(filename)) return;
 
-                clayIcons.forEach((icon) => {
-                    const { base: filename } = parse(icon);
-                    copyFileSync(icon, `${destination}/${filename}`);
+                        iconReferences.set(filename, icon);
+                    },
+                );
+
+                if (!existsSync(DESTINATION_PATH)) {
+                    mkdirSync(DESTINATION_PATH, { recursive: true });
+                }
+
+                iconReferences.forEach((icon, filename) => {
+                    copyFileSync(icon, `${DESTINATION_PATH}/${filename}`);
                 });
             },
         },
-        VitePluginSvgSpritemap("./src/**/*.svg", {
+
+        VitePluginSvgSpritemap(`${DESTINATION_PATH}/*.svg`, {
             prefix: false,
             output: {
                 use: false,
